@@ -1,0 +1,21 @@
+def sereja_dima(length,card):
+    sereja=0
+    dima=0
+    for i in range(length):
+        pick=max(card[0],card[-1])
+        card.remove(pick)
+        if i%2==0:
+            sereja+=pick
+        
+        else:
+            dima+=pick 
+    return [sereja,dima]
+# take input 
+length=int(input())
+card=list(map(int,input().split()))
+print(*sereja_dima(length,card))
+
+
+
+
+        
